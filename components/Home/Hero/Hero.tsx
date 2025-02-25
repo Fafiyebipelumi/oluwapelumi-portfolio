@@ -1,5 +1,6 @@
 import { BaseInfo } from '@/Data/data'
 import React from 'react'
+import { FaDownload } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -23,7 +24,7 @@ const Hero = () => {
                     {/* Button */}
                     <button className='md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700 hover:bg-blue-900 flex items-center space-x-2'>
                         <span>Download CV</span>
-                        {/* <FaDownload /> */}
+                        <FaDownload />
                     </button>
                 </div>
                 {/* Image Content */}

@@ -1,6 +1,7 @@
 import { navLinks } from "@/constant/constant";
 import Link from "next/link";
 import React from "react";
+import { CgClose } from "react-icons/cg";
 
 // define props type
 type NavProps = {
@@ -24,8 +25,8 @@ const MobileNav: React.FC<NavProps> = ({showNav, closeNav}) => {
             </Link>
           ))}
           {/* Close Button */}
-          {/* <CgClose onClick={closeNav} className='absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8 w-6 h-6 text-white' /> */}
-          <button onClick={closeNav} className='absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8 w-6 h-6 text-white'>X</button>
+          <CgClose onClick={closeNav} className='absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8 w-6 h-6 text-white cursor-pointer' />
+          {/* <button onClick={closeNav} className='absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8 w-6 h-6 text-white'>X</button> */}
       </div>
     </div>
   );

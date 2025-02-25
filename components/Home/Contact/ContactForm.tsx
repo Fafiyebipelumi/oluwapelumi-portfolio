@@ -6,7 +6,7 @@ const ContactForm = () => {
         <h1 className='text-bg text-2xl md:text-3xl lg:text-[2.5rem] font-bold'>
             Let's work together!
         </h1>
-        <p className='text-gray-200 mt-3 lg:text-base text-xs md:text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsam molestias repellendus enim ab commodi?</p>
+        <p className='text-gray-200 mt-3 lg:text-base text-xs md:text-sm'>Kindly fill the form and let's get your dream project done!</p>
         {/* Input field */}
         <form className='mt-8 block w-full overflow-hidden'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
