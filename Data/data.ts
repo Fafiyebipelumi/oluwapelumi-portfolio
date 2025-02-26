@@ -80,8 +80,8 @@ export const projectData = [
     },
     {
         id: 6,
-        image: "/images/peoplewisher.PNG",
-        url: "https://peoplewisher.com",
+        image: "/images/innoxPNG.PNG",
+        url: "https://innoxtech.co",
     }
 ];
 
