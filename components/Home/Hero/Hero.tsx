@@ -23,7 +23,7 @@ const Hero = () => {
                     </p>
                     {/* Button */}
                     <button className='md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700 hover:bg-blue-900 flex items-center space-x-2'>
-                        <span>Download CV</span>
+                        <a href="/1_OLUWAPELUMI_FAFIYEBI Resume.pdf" download={"Oluwapelumi's CV"}>Download CV</a>
                         <FaDownload />
                     </button>
                 </div>
