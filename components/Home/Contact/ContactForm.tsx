@@ -18,18 +18,32 @@ const ContactForm = () => {
     
       const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const response = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        });
-    
-        if (response.ok) {
-          alert("Message sent successfully!");
-          setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
-        } else {
-          alert("Error sending message.");
+
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+          });
+  
+          const result = await response.json()
+          console.log(result);
+  
+          if (result.success) {
+            alert("Message sent successfully!");
+          } else {
+            alert("Failed to send message.");
+          }
+        } catch (error) {
+          console.error("Error submitting form:", error);
         }
+        
+        // if (response.ok) {
+        //   alert("Message sent successfully!");
+        //   setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+        // } else {
+        //   alert("Error sending message.");
+        // }
       };
 
   return (
@@ -50,7 +64,7 @@ const ContactForm = () => {
             </div>
             <textarea rows={7} placeholder='Message' className='w-full mt-5 bg-black text-white placeholder:text-gray-600 px-4 py-3.5 rounded-md border-[1.5px] border-gray-200 border-opacity-15 outline-none' name='message' value={formData.message} onChange={handleChange}></textarea>
             <div className='mt-4'>
-                <button className='px-8 py-3.5 bg-[#7947df] text-white hover:bg-[#5c2fb7] transition-all duration-150 rounded-full'>Send Message</button>
+                <button type='submit' className='px-8 py-3.5 bg-[#7947df] text-white hover:bg-[#5c2fb7] transition-all duration-150 rounded-full'>Send Message</button>
             </div>
         </form>
     </div>
