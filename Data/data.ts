@@ -2,8 +2,8 @@ export const BaseInfo = {
     name: "Oluwapelumi",
     position: "Front End Web Developer",
     description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro numquam ad, vero consequuntur aperiam cumque voluptatum pariatur veniam? Qui facilis est ipsam odio cum!",
-    profilePic: "/images/hero.png",
+        "I'm a frontend developer with over four years of experience crafting responsive, user-friendly web applications. I specialize in modern JavaScript frameworks like React and Next.js, with expertise in performance optimization, UI/UX design, and seamless animations using Framer Motion. Passionate about building intuitive digital experiences, I focus on writing clean, maintainable code that enhances usability and engagement.",
+    profilePic: "/images/background.jpg",
 };
 
 export const aboutInfo = {
