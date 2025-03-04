@@ -16,35 +16,35 @@ const ContactForm = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       };
     
-      const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+      // const handleSubmit = async (e: React.FormEvent) => {
+      //   e.preventDefault();
 
-        try {
-          const response = await fetch("/api/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-          });
+      //   try {
+      //     const response = await fetch("/api/contact", {
+      //       method: "POST",
+      //       headers: { "Content-Type": "application/json" },
+      //       body: JSON.stringify(formData),
+      //     });
   
-          const result = await response.json()
-          console.log(result);
+      //     const result = await response.json()
+      //     console.log(result);
   
-          if (result.success) {
-            alert("Message sent successfully!");
-          } else {
-            alert("Failed to send message.");
-          }
-        } catch (error) {
-          console.error("Error submitting form:", error);
-        }
+      //     if (result.success) {
+      //       alert("Message sent successfully!");
+      //     } else {
+      //       alert("Failed to send message.");
+      //     }
+      //   } catch (error) {
+      //     console.error("Error submitting form:", error);
+      //   }
         
-        // if (response.ok) {
-        //   alert("Message sent successfully!");
-        //   setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
-        // } else {
-        //   alert("Error sending message.");
-        // }
-      };
+      //   // if (response.ok) {
+      //   //   alert("Message sent successfully!");
+      //   //   setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+      //   // } else {
+      //   //   alert("Error sending message.");
+      //   // }
+      // };
 
   return (
     <div className='bg-[#140c1c] rounded-lg p-4 sm:p-10'>
@@ -53,7 +53,7 @@ const ContactForm = () => {
         </h1>
         <p className='text-gray-200 mt-3 lg:text-base text-xs md:text-sm'>Kindly fill the form and let's get your dream project done!</p>
         {/* Input field */}
-        <form className='mt-8 block w-full overflow-hidden' onSubmit={handleSubmit}>
+        <form className='mt-8 block w-full overflow-hidden'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
                 <input type="text" placeholder='First Name' className='flex-1 bg-black text-white placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px] border-gray-200 border-opacity-15 outline-none w-full' name='firstName' value={formData.firstName} onChange={handleChange} />
                 <input type="text" placeholder='Last Name' className='flex-1 bg-black text-white placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px] border-gray-200 border-opacity-15 outline-none w-full' name='lastName' value={formData.lastName} onChange={handleChange} />

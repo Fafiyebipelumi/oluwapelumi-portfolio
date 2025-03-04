@@ -20,7 +20,7 @@ export default async function handler(req: Request) {
     console.log("📩 Incoming request...");
 
     const { firstName, lastName, email, phone, message } = await req.json();
-    
+
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
